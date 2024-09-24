@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import Map from "react-map-gl";
 import { invoke } from "@tauri-apps/api/core";
+import { getNycZipCodes } from "@/helpers/db";
 
 export default function Home() {
   const mapbBoxToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
@@ -11,6 +12,8 @@ export default function Home() {
     invoke<string>("greet", { name: "Backend" })
       .then((result: string) => console.log(result))
       .catch(console.error);
+
+    getNycZipCodes().then((result) => console.log(result));
   }, []);
 
   return (
