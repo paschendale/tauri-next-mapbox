@@ -1,33 +1,15 @@
 "use client";
-import { useEffect } from "react";
-import Map from "react-map-gl";
-import { invoke } from "@tauri-apps/api/core";
-import { getNycZipCodes } from "@/helpers/db";
+import dynamic from "next/dynamic";
+
+const Map = dynamic(() => import("./_components/Map"), {
+  loading: () => <p>Loading Map...</p>,
+  ssr: false,
+});
 
 export default function Home() {
-  const mapbBoxToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
-  console.log(mapbBoxToken);
-
-  useEffect(() => {
-    invoke<string>("greet", { name: "Backend" })
-      .then((result: string) => console.log(result))
-      .catch(console.error);
-
-    getNycZipCodes().then((result) => console.log(result));
-  }, []);
-
   return (
     <div>
-      <Map
-        mapboxAccessToken={mapbBoxToken}
-        initialViewState={{
-          longitude: -122.4,
-          latitude: 37.8,
-          zoom: 14,
-        }}
-        style={{ width: 800, height: 600 }}
-        mapStyle="mapbox://styles/mapbox/streets-v9"
-      />
+      <Map />
     </div>
   );
 }
