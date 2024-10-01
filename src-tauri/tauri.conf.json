@@ -43,7 +43,7 @@
   "productName": "app",
   "mainBinaryName": "app",
   "version": "0.1.0",
-  "identifier": "com.tauri.dev",
+  "identifier": "tauri-next-rlayers.marotta.dev",
   "plugins": {},
   "app": {
     "windows": [

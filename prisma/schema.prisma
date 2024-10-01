@@ -1,0 +1,550 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model q1_tab20_cd11820_zcta520_st11 {
+  id                 Int     @id @default(autoincrement())
+  OID_CD118_20       BigInt?
+  GEOID_CD118_20     Int?
+  NAMELSAD_CD118_20  String? @db.VarChar
+  AREALAND_CD118_20  Int?
+  AREAWATER_CD118_20 Int?
+  MTFCC_CD118_20     String? @db.VarChar
+  FUNCSTAT_CD118_20  String? @db.VarChar
+  OID_ZCTA5_20       BigInt?
+  GEOID_ZCTA5_20     Int?
+  NAMELSAD_ZCTA5_20  String? @db.VarChar
+  AREALAND_ZCTA5_20  Int?
+  AREAWATER_ZCTA5_20 Int?
+  MTFCC_ZCTA5_20     String? @db.VarChar
+  CLASSFP_ZCTA5_20   String? @db.VarChar
+  FUNCSTAT_ZCTA5_20  String? @db.VarChar
+  AREALAND_PART      Int?
+  AREAWATER_PART     Int?
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model q1_zbp19totals {
+  id       Int     @id @default(autoincrement())
+  zip      Int?
+  name     String? @db.VarChar
+  emp_nf   String? @db.VarChar
+  emp      Int?
+  qp1_nf   String? @db.VarChar
+  qp1      Int?
+  ap_nf    String? @db.VarChar
+  ap       Int?
+  est      Int?
+  city     String? @db.VarChar
+  stabbr   String? @db.VarChar
+  cty_name String? @db.VarChar
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model q1_zbp20totals {
+  id       Int     @id @default(autoincrement())
+  zip      Int?
+  name     String? @db.VarChar
+  emp_nf   String? @db.VarChar
+  emp      Int?
+  qp1_nf   String? @db.VarChar
+  qp1      Int?
+  ap_nf    String? @db.VarChar
+  ap       Int?
+  est      Int?
+  city     String? @db.VarChar
+  stabbr   String? @db.VarChar
+  cty_name String? @db.VarChar
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model q1_zbp21totals {
+  id       Int     @id @default(autoincrement())
+  zip      Int?
+  name     String? @db.VarChar
+  emp_nf   String? @db.VarChar
+  emp      Int?
+  qp1_nf   String? @db.VarChar
+  qp1      Int?
+  ap_nf    String? @db.VarChar
+  ap       Int?
+  est      Int?
+  city     String? @db.VarChar
+  stabbr   String? @db.VarChar
+  cty_name String? @db.VarChar
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model q1_zbp22totals {
+  id       Int     @id @default(autoincrement())
+  zip      Int?
+  name     String? @db.VarChar
+  emp_nf   String? @db.VarChar
+  emp      Int?
+  qp1_nf   String? @db.VarChar
+  qp1      Int?
+  ap_nf    String? @db.VarChar
+  ap       Int?
+  est      Int?
+  city     String? @db.VarChar
+  stabbr   String? @db.VarChar
+  cty_name String? @db.VarChar
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model q2_ny_congressional_zip_conversion {
+  id                 Int     @id @default(autoincrement())
+  OID_CD118_20       BigInt?
+  GEOID_CD118_20     Int?
+  NAMELSAD_CD118_20  String? @db.VarChar
+  AREALAND_CD118_20  BigInt?
+  AREAWATER_CD118_20 BigInt?
+  MTFCC_CD118_20     String? @db.VarChar
+  FUNCSTAT_CD118_20  String? @db.VarChar
+  OID_ZCTA5_20       BigInt?
+  GEOID_ZCTA5_20     Int?
+  NAMELSAD_ZCTA5_20  String? @db.VarChar
+  AREALAND_ZCTA5_20  Int?
+  AREAWATER_ZCTA5_20 Int?
+  MTFCC_ZCTA5_20     String? @db.VarChar
+  CLASSFP_ZCTA5_20   String? @db.VarChar
+  FUNCSTAT_ZCTA5_20  String? @db.VarChar
+  AREALAND_PART      Int?
+  AREAWATER_PART     BigInt?
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model q2_zip_code_econ_data {
+  id       Int     @id @default(autoincrement())
+  zip      Int?
+  name     String? @db.VarChar
+  naics    String? @db.VarChar
+  est      Int?
+  n_5      String? @map("n<5") @db.VarChar
+  n5_9     String? @db.VarChar
+  n10_19   String? @db.VarChar
+  n20_49   String? @db.VarChar
+  n50_99   String? @db.VarChar
+  n100_249 String? @db.VarChar
+  n250_499 String? @db.VarChar
+  n500_999 String? @db.VarChar
+  n1000    String? @db.VarChar
+  city     String? @db.VarChar
+  stabbr   String? @db.VarChar
+  cty_name String? @db.VarChar
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model q3_ACS_5_Year_Housing_Characteristics_DC_Ward {
+  id               Int      @id @default(autoincrement())
+  OBJECTID         Int?
+  GEOID            Int?
+  NAMELSAD         String?  @db.VarChar
+  NAME             String?  @db.VarChar
+  DP04_0001E       Int?
+  DP04_0002E       Int?
+  DP04_0003E       Int?
+  DP04_0004E       Float?
+  DP04_0005E       Float?
+  DP04_0006E       Int?
+  DP04_0007E       Int?
+  DP04_0008E       Int?
+  DP04_0009E       Int?
+  DP04_0010E       Int?
+  DP04_0011E       Int?
+  DP04_0012E       Int?
+  DP04_0013E       Int?
+  DP04_0014E       Int?
+  DP04_0015E       Int?
+  DP04_0016E       Int?
+  DP04_0017E       Int?
+  DP04_0018E       Int?
+  DP04_0019E       Int?
+  DP04_0020E       Int?
+  DP04_0021E       Int?
+  DP04_0022E       Int?
+  DP04_0023E       Int?
+  DP04_0024E       Int?
+  DP04_0025E       Int?
+  DP04_0026E       Int?
+  DP04_0027E       Int?
+  DP04_0028E       Int?
+  DP04_0029E       Int?
+  DP04_0030E       Int?
+  DP04_0031E       Int?
+  DP04_0032E       Int?
+  DP04_0033E       Int?
+  DP04_0034E       Int?
+  DP04_0035E       Int?
+  DP04_0036E       Int?
+  DP04_0037E       Float?
+  DP04_0038E       Int?
+  DP04_0039E       Int?
+  DP04_0040E       Int?
+  DP04_0041E       Int?
+  DP04_0042E       Int?
+  DP04_0043E       Int?
+  DP04_0044E       Int?
+  DP04_0045E       Int?
+  DP04_0046E       Int?
+  DP04_0047E       Int?
+  DP04_0048E       Float?
+  DP04_0049E       Float?
+  DP04_0050E       Int?
+  DP04_0051E       Int?
+  DP04_0052E       Int?
+  DP04_0053E       Int?
+  DP04_0054E       Int?
+  DP04_0055E       Int?
+  DP04_0056E       Int?
+  DP04_0057E       Int?
+  DP04_0058E       Int?
+  DP04_0059E       Int?
+  DP04_0060E       Int?
+  DP04_0061E       Int?
+  DP04_0062E       Int?
+  DP04_0063E       Int?
+  DP04_0064E       Int?
+  DP04_0065E       Int?
+  DP04_0066E       Int?
+  DP04_0067E       Int?
+  DP04_0068E       Boolean?
+  DP04_0069E       Int?
+  DP04_0070E       Int?
+  DP04_0071E       Int?
+  DP04_0072E       Int?
+  DP04_0073E       Int?
+  DP04_0074E       Int?
+  DP04_0075E       Int?
+  DP04_0076E       Int?
+  DP04_0077E       Int?
+  DP04_0078E       Int?
+  DP04_0079E       Int?
+  DP04_0080E       Int?
+  DP04_0081E       Int?
+  DP04_0082E       Int?
+  DP04_0083E       Int?
+  DP04_0084E       Int?
+  DP04_0085E       Int?
+  DP04_0086E       Int?
+  DP04_0087E       Int?
+  DP04_0088E       Int?
+  DP04_0089E       Int?
+  DP04_0090E       Int?
+  DP04_0091E       Int?
+  DP04_0092E       Int?
+  DP04_0093E       Int?
+  DP04_0094E       Int?
+  DP04_0095E       Int?
+  DP04_0096E       Int?
+  DP04_0097E       Int?
+  DP04_0098E       Int?
+  DP04_0099E       Int?
+  DP04_0100E       Int?
+  DP04_0101E       Int?
+  DP04_0102E       Int?
+  DP04_0103E       Int?
+  DP04_0104E       Int?
+  DP04_0105E       Int?
+  DP04_0106E       Int?
+  DP04_0107E       Int?
+  DP04_0108E       Int?
+  DP04_0109E       Int?
+  DP04_0110E       Int?
+  DP04_0111E       Int?
+  DP04_0112E       Int?
+  DP04_0113E       Int?
+  DP04_0114E       Int?
+  DP04_0115E       Int?
+  DP04_0116E       Int?
+  DP04_0117E       Int?
+  DP04_0118E       Int?
+  DP04_0119E       Int?
+  DP04_0120E       Int?
+  DP04_0121E       Int?
+  DP04_0122E       Int?
+  DP04_0123E       Int?
+  DP04_0124E       Int?
+  DP04_0125E       Int?
+  DP04_0126E       Int?
+  DP04_0127E       Int?
+  DP04_0128E       Int?
+  DP04_0129E       Int?
+  DP04_0130E       Int?
+  DP04_0131E       Int?
+  DP04_0132E       Int?
+  DP04_0133E       Int?
+  DP04_0134E       Int?
+  DP04_0135E       Int?
+  DP04_0136E       Int?
+  DP04_0137E       Int?
+  DP04_0138E       Int?
+  DP04_0139E       Int?
+  DP04_0140E       Int?
+  DP04_0141E       Int?
+  DP04_0142E       Int?
+  DP04_0143E       Int?
+  GIS_ID           String?  @db.VarChar
+  SE_ANNO_CAD_DATA String?  @db.VarChar
+  GLOBALID         String?  @db.VarChar
+  SHAPEAREA        Boolean?
+  SHAPELEN         Boolean?
+
+  @@map("q3_ACS_5-Year_Housing_Characteristics_DC_Ward")
+}
+
+model q3_q5_DC_zip_to_ward_mapping {
+  id       Int     @id @default(autoincrement())
+  field_1  String? @db.VarChar
+  field_2  Int?
+  field_3  Int?
+  field_4  Int?
+  field_5  Int?
+  field_6  Int?
+  field_7  Int?
+  field_8  Int?
+  field_9  Int?
+  field_10 Int?
+  field_11 Int?
+  field_12 Int?
+  field_13 Int?
+  field_14 Int?
+  field_15 Int?
+  field_16 Int?
+  field_17 Int?
+  field_18 Int?
+  field_19 Int?
+  field_20 Int?
+  field_21 Int?
+  field_22 Int?
+  field_23 Int?
+  field_24 Int?
+  field_25 Int?
+  field_26 Int?
+  field_27 Int?
+  field_28 Int?
+
+  @@map("q3_q5_DC zip to ward mapping")
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model q3_zbp22totals {
+  id       Int     @id @default(autoincrement())
+  zip      Int?
+  name     String? @db.VarChar
+  emp_nf   String? @db.VarChar
+  emp      Int?
+  qp1_nf   String? @db.VarChar
+  qp1      Int?
+  ap_nf    String? @db.VarChar
+  ap       Int?
+  est      Int?
+  city     String? @db.VarChar
+  stabbr   String? @db.VarChar
+  cty_name String? @db.VarChar
+}
+
+/// This model or at least one of its fields has comments in the database, and requires an additional setup for migrations: Read more: https://pris.ly/d/database-comments
+model q4_DOF_Condominium_Comparable_Rental_Income_in_NYC_20240929 {
+  id                             Int     @id @default(autoincrement())
+  Boro_Block_Lot                 String? @map("Boro-Block-Lot") @db.VarChar
+  Condo_Section                  String? @map("Condo Section") @db.VarChar
+  Address                        String? @db.VarChar
+  Neighborhood                   String? @db.VarChar
+  Building_Classification        String? @map("Building Classification") @db.VarChar
+  Total_Units                    Int?    @map("Total Units")
+  Year_Built                     Int?    @map("Year Built")
+  Gross_SqFt                     Int?    @map("Gross SqFt")
+  Estimated_Gross_Income         Int?    @map("Estimated Gross Income")
+  Gross_Income_per_SqFt          Float?  @map("Gross Income per SqFt")
+  Estimated_Expense              Int?    @map("Estimated Expense")
+  Expense_per_SqFt               Float?  @map("Expense per SqFt")
+  Net_Operating_Income           Int?    @map("Net Operating Income")
+  Full_Market_Value              Int?    @map("Full Market Value")
+  Market_Value_per_SqFt          Float?  @map("Market Value per SqFt")
+  Boro_Block_Lot_1               String? @map("Boro-Block-Lot 1") @db.VarChar
+  Address_1                      String? @map("Address 1") @db.VarChar
+  Neighborhood_1                 String? @map("Neighborhood 1") @db.VarChar
+  Building_Classification_1      String? @map("Building Classification 1") @db.VarChar
+  Total_Units_1                  Int?    @map("Total Units 1")
+  Year_Built_1                   Int?    @map("Year Built 1")
+  Gross_SqFt_1                   Int?    @map("Gross SqFt 1")
+  Estimated_Gross_Income_1       Int?    @map("Estimated Gross Income 1")
+  Gross_Income_per_SqFt_1        Float?  @map("Gross Income per SqFt 1")
+  Estimated_Expense_1            Int?    @map("Estimated Expense 1")
+  Expense_per_SqFt_1             Float?  @map("Expense per SqFt 1")
+  Net_Operating_Income_1         Int?    @map("Net Operating Income 1")
+  Full_Market_Value_1            Int?    @map("Full Market Value 1")
+  Market_Value_per_SqFt_1        Float?  @map("Market Value per SqFt 1")
+  Distance_from_Condo_in_miles   Float?  @map("Distance from Condo in miles")
+  Boro_Block_Lot_2               String? @map("Boro-Block-Lot 2") @db.VarChar
+  Address_2                      String? @map("Address 2") @db.VarChar
+  Neighborhood_2                 String? @map("Neighborhood 2") @db.VarChar
+  Building_Classification_2      String? @map("Building Classification 2") @db.VarChar
+  Total_Units_2                  Int?    @map("Total Units 2")
+  Year_Built_2                   Int?    @map("Year Built 2")
+  Gross_SqFt_2                   Int?    @map("Gross SqFt 2")
+  Estimated_Gross_Income_2       Int?    @map("Estimated Gross Income 2")
+  Gross_Income_per_SqFt_2        Float?  @map("Gross Income per SqFt 2")
+  Estimated_Expense_2            Int?    @map("Estimated Expense 2")
+  Expense_per_SqFt_2             Float?  @map("Expense per SqFt 2")
+  Net_Operating_Income_2         Int?    @map("Net Operating Income 2")
+  Full_Market_Value_2            Int?    @map("Full Market Value 2")
+  Market_Value_per_SqFt_2        Float?  @map("Market Value per SqFt 2")
+  Distance_from_Condo_in_miles_1 Float?  @map("Distance from Condo in miles 1")
+  Boro_Block_Lot_3               String? @map("Boro-Block-Lot 3") @db.VarChar
+  Address_3                      String? @map("Address 3") @db.VarChar
+  Neighborhood_3                 String? @map("Neighborhood 3") @db.VarChar
+  Building_Classification_3      String? @map("Building Classification 3") @db.VarChar
+  Total_Units_3                  Int?    @map("Total Units 3")
+  Year_Built_3                   Int?    @map("Year Built 3")
+  Gross_SqFt_3                   Int?    @map("Gross SqFt 3")
+  Estimated_Gross_Income_3       Int?    @map("Estimated Gross Income 3")
+  Gross_Income_per_SqFt_3        Float?  @map("Gross Income per SqFt 3")
+  Estimated_Expense_3            Int?    @map("Estimated Expense 3")
+  Expense_per_SqFt_3             Float?  @map("Expense per SqFt 3")
+  Net_Operating_Income_3         Int?    @map("Net Operating Income 3")
+  Full_Market_Value_3            Int?    @map("Full Market Value 3")
+  Market_Value_per_SqFt_3        Float?  @map("Market Value per SqFt 3")
+  Distance_from_Condo_in_miles_2 Float?  @map("Distance from Condo in miles 2")
+  Report_Year                    Int?    @map("Report Year")
+}
+
+model q5_DC_retail_inventory___example_data {
+  id                                   Int      @id @default(autoincrement())
+  field_1                              String?  @db.VarChar
+  Available_Ray_Ban_Sunglasses__Black_ Int?     @map("Available Ray-Ban Sunglasses (Black)")
+  Available_Ray_Ban_Sunglasses__Brown_ Int?     @map("Available Ray-Ban Sunglasses (Brown)")
+  DC                                   Boolean?
+  Ward_1                               Boolean? @map("Ward 1")
+  Ward_2                               Boolean? @map("Ward 2")
+  Ward_3                               Boolean? @map("Ward 3")
+  Ward_4                               String?  @map("Ward 4") @db.VarChar
+  Ward_5                               String?  @map("Ward 5") @db.VarChar
+  Ward_6                               Boolean? @map("Ward 6")
+  Ward_7                               String?  @map("Ward 7") @db.VarChar
+  Ward_8                               String?  @map("Ward 8") @db.VarChar
+
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20001 Boolean? @map("20001")
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20007 String? @map("20007") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20008 Boolean? @map("20008")
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20002 String? @map("20002") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20020 String? @map("20020") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20009 Boolean? @map("20009")
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20010 String? @map("20010") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20003 String? @map("20003") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20024 String? @map("20024") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20004 String? @map("20004") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20011 String? @map("20011") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20019 String? @map("20019") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20032 String? @map("20032") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20005 String? @map("20005") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20012 String? @map("20012") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20373 String? @map("20373") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20006 String? @map("20006") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20015 String? @map("20015") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20017 String? @map("20017") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20053 String? @map("20053") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20307 String? @map("20307") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20018 String? @map("20018") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20202 String? @map("20202") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20036 String? @map("20036") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20037 String? @map("20037") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20045 String? @map("20045") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20052 String? @map("20052") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20057 String? @map("20057") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20230 String? @map("20230") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20240 String? @map("20240") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20245 String? @map("20245") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20405 String? @map("20405") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20418 String? @map("20418") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20427 String? @map("20427") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20506 String? @map("20506") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20520 String? @map("20520") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20535 String? @map("20535") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20551 String? @map("20551") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20560 String? @map("20560") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20565 String? @map("20565") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20566 String? @map("20566") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20204 Boolean? @map("20204")
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20228 String? @map("20228") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20260 String? @map("20260") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20319 String? @map("20319") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20390 String? @map("20390") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20510 String? @map("20510") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20540 String? @map("20540") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20553 String? @map("20553") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20593 String? @map("20593") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20016 String? @map("20016") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20064 String? @map("20064") @db.VarChar
+  /// This field was commented out because of an invalid name. Please provide a valid one that matches [a-zA-Z][a-zA-Z0-9_]*
+  // 20317 String? @map("20317") @db.VarChar
+  @@map("q5_DC retail inventory - example data")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+model spatial_ref_sys {
+  srid      Int     @id
+  auth_name String? @db.VarChar(256)
+  auth_srid Int?
+  srtext    String? @db.VarChar(2048)
+  proj4text String? @db.VarChar(2048)
+}
